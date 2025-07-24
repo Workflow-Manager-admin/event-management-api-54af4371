@@ -15,7 +15,7 @@ app = Flask(__name__)
 app.url_map.strict_slashes = False
 
 # Configure from .env or use SQLite fallback
-DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///events.db")
+DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///instance/events.db")
 app.config["SQLALCHEMY_DATABASE_URI"] = DATABASE_URL
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
